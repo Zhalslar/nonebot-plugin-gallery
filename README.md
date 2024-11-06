@@ -11,19 +11,16 @@
 ## 使用方法
 
 ### 指令说明：
-
-- `{gpt_sovits_command} [text] [-e emotion] [-l language]` - 生成语音，支持可选情绪和语言
-- `gptsovits帮助` - 显示帮助信息
-
+- `{图库名}` - 触发图片发送
+- `添加{图库名} 标签` - 向指定图库添加图片
+- `删除{图库名}` - 删除指定图库的一张图
+- `查看{图库名}` - 查看指定图库的所有图片
+- 
 ### 示例：
+![Uploading cbcc3d90ad707ab256d754dbffb0dbc7.jpg…]()
+![07cbc7ebcbb206d6552241e90ff6a926](https://github.com/user-attachments/assets/f701e0ea-1450-4632-9242-fbc688667e91)
+![58424caa1355e1f9fcf9fe7f4e359c36](https://github.com/user-attachments/assets/20b81f34-1a41-43d8-a2fa-8057e0ebb4c9)
 
-- `{gpt_sovits_command} 你好` - 生成语音
-- `{gpt_sovits_command} 你好 -e 1` - 使用情绪编号 1 生成语音
-- `{gpt_sovits_command} hello -e 1 -l en` - 以情绪编号 1 生成一段英文语音
-
-**可选语言**：中文、英文、日文、中英混合、日英混合、多语种混合
-
-> `gpt_sovits_command` 和 `emotion` 参数取决于配置文件中的设置
 
 ## 安装方法
 
