@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nonebot-plugin-gallery"
+version = "0.1.0"
+description = "一个可管理并在聊天时调用图库的Nonebot2插件"
+authors = [
+    { name="Zhalslar", email="2936169201@qq.com" }
+]
+license = "MIT"
+requires-python = ">=3.8"
+readme = "README.md"
+
+[tool.nonebot]
+adapter = "nonebot.adapters.onebot.v11"
+
+[project.urls]
+homepage = "https://github.com/Perseus037/nonebot_plugin_longtu/"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = "^2.0"
+httpx = "^0.23.0"
+Pillow = "^9.2.0"
+aiofiles = "^22.1.0"
+aiosqlite = "^0.17.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+nonebot-adapter-onebot = "^2.0"
