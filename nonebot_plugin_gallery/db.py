@@ -6,7 +6,7 @@ from nonebot.log import logger
 import asyncio
 import hashlib
 import aiosqlite
-from .config import accurate_keywords, fuzzy_keywords, randpic_store_dir_path
+from .config import config
 
 class DBConnectionManager:
     _instance = None
@@ -25,12 +25,12 @@ class DBConnectionManager:
             cls._connection = None
 
 
-randpic_command_list: List[str] = accurate_keywords + fuzzy_keywords  # 将命令列表转换为集合和元组
+randpic_command_list: List[str] = config.accurate_keywords + config.fuzzy_keywords  # 将命令列表转换为集合和元组
 randpic_command_set: Set[str] = set(randpic_command_list)
 randpic_command_tuple: Tuple[str, ...] = tuple(randpic_command_set)  # 形成指令元组
 randpic_command_add_tuple = tuple("添加" + tup for tup in randpic_command_tuple)  # 形成添加指令元组
 randpic_command_del_tuple = tuple("删除" + tup for tup in randpic_command_tuple)  # 用于删除图片的指令
-randpic_path = Path(randpic_store_dir_path) # 设置图片存储路径
+randpic_path = Path(config.randpic_store_dir_path) # 设置图片存储路径
 randpic_command_path_tuple = tuple(randpic_path / command for command in randpic_command_tuple)  # 形成指令文件夹路径元组
 
 

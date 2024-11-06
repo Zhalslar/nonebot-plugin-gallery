@@ -8,7 +8,7 @@ from . import(
 )
 
 from nonebot.plugin import PluginMetadata
-from .config import randpic_store_dir_path
+from .config import Config
 
 
 __plugin_meta__ = PluginMetadata(
@@ -17,10 +17,11 @@ __plugin_meta__ = PluginMetadata(
     usage="自行阅读README",
     type="application",
     homepage="https://github.com/Zhalslar/nonebot-plugin-gallery",
-    config=None,
+    config=Config,
     extra={
         "author": "Zhalslar",
-        "version": "1.0.0",
+        "version": "0.1.0",
         "license": "MIT",
     }
+    supported_adapters={"~onebot.v11"}
 )

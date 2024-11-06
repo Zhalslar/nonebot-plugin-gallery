@@ -7,7 +7,7 @@ from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import MessageSegment, Message
 from nonebot.params import Arg, Fullmatch
 from nonebot.log import logger
-from .db import randpic_command_del_tuple, randpic_path, DBConnectionManager
+from ..db import randpic_command_del_tuple, randpic_path, DBConnectionManager
 
 delete = on_fullmatch(randpic_command_del_tuple, priority=2, block=True)
 

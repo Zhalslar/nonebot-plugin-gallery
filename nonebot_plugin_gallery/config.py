@@ -1,20 +1,12 @@
+from pydantic import BaseModel, Extra
+from nonebot import get_driver, get_plugin_config
 
-# 用户自定义图片存储文件夹路径
-randpic_store_dir_path: str = "D://mybot//Nonebot//bot2//randpic"
-
-# 精准匹配关键词
-accurate_keywords = [
- "new"
-]
-
-# 模糊匹配关键词
-fuzzy_keywords = [
-    "帮助"
-]
+class Config(BaseModel, extra=Extra.ignore):
+    randpic_store_dir_path: str
+    accurate_keywords: list[str]
+    fuzzy_keywords: list[str]
+    compress: bool = False
+    compression_threshold: int = 512
 
 
-
-#是否压缩图片
-compress = False
-#压缩阈值(单位为像素)
-compression_threshold = 512
+config = get_driver().config

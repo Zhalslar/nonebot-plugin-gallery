@@ -12,9 +12,9 @@ from nonebot.log import logger
 from nonebot.typing import T_State
 from nonebot.adapters.onebot.v11 import Bot, Event, Message,MessageSegment
 
-from .config import compression_threshold, compress
-from .db import randpic_path, DBConnectionManager
-from .utils import resize_image
+from ..config import config
+from ..db import randpic_path, DBConnectionManager
+from ..utils import resize_image
 
 add = on_command("添加", priority=1, block=True)
 
@@ -96,8 +96,8 @@ async def add_pic(state: T_State, pic_segment: MessageSegment):
             return
 
     # 图片过大时是否压缩
-    if compress:
-        data = resize_image(Image.open(io.BytesIO(data)), compression_threshold)
+    if config.compress:
+        data = resize_image(Image.open(io.BytesIO(data)), config.compression_threshold)
 
     # 构建文件路径和文件名
     _, extension = os.path.splitext(pic_url)
