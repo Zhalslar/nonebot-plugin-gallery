@@ -1,4 +1,4 @@
-`nonebot-plugin-gallery`
+#`nonebot-plugin-gallery`
 一个强大的图库管理器
 **功能介绍**
 **安装方法**
