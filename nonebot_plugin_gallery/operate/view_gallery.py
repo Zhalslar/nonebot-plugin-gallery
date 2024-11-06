@@ -1,6 +1,6 @@
 from nonebot import on_command
 from nonebot.adapters.onebot.v11 import Event, GROUP
-from .utils import  get_all_images_in_gallery
+from ..utils import  get_all_images_in_gallery
 
 view_gallery = on_command("查看", permission=GROUP, block=True)
 

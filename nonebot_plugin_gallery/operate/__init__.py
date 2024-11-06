@@ -1,10 +1,14 @@
 
+
 from . import(
+    add_picture,
+    exact_match,
+    fuzzy_match,
     config,
     db,
     utils,
-    match,
-    operate
+    del_picture,
+    view_gallery
 )
 
 from nonebot.plugin import PluginMetadata
@@ -24,3 +28,5 @@ __plugin_meta__ = PluginMetadata(
         "license": "MIT",
     }
 )
+
+__usage__ = "None"
