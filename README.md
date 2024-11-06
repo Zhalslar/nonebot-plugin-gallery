@@ -1,4 +1,4 @@
-# nonebot-plugin-gallery
+#                                                          nonebot-plugin-gallery
 一个强大的图库管理器
 本插件还没上传到Nonebot的插件商店，
 安装方法：先下载好本插件的代码，
