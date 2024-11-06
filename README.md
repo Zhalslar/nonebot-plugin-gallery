@@ -1,4 +1,4 @@
-# noneBot-plugin-gallery
+# nonebot-plugin-gallery
 
 ## 介绍
 
