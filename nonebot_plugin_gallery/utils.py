@@ -26,9 +26,6 @@ def resize_image(image: Image.Image, max_size: int = 512) -> bytes:
     return output.getvalue()
 
 
-
-
-
 async def get_all_images_in_gallery(gallery_name: str) -> List[str]:
     """
     查询数据库，获取指定图库下所有图片的名称。

@@ -8,7 +8,6 @@ from . import(
 )
 
 from nonebot.plugin import PluginMetadata
-from .config import Config
 
 
 __plugin_meta__ = PluginMetadata(
@@ -17,6 +16,6 @@ __plugin_meta__ = PluginMetadata(
     usage="自行阅读README",
     type="application",
     homepage="https://github.com/Zhalslar/nonebot-plugin-gallery",
-    config=Config,
+    config=None,
     supported_adapters={"~onebot.v11"}
 )

@@ -1,18 +1,10 @@
 
-
 from . import(
-    add_picture,
     exact_match,
     fuzzy_match,
-    config,
-    db,
-    utils,
-    del_picture,
-    view_gallery
 )
 
 from nonebot.plugin import PluginMetadata
-from .config import randpic_store_dir_path
 
 
 __plugin_meta__ = PluginMetadata(

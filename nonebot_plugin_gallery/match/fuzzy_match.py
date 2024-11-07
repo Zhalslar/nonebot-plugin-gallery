@@ -1,10 +1,10 @@
 from nonebot import on_keyword, logger
 from nonebot.adapters.onebot.v11 import MessageSegment, Event, GROUP
-from .db import randpic_path, DBConnectionManager
-from .config import fuzzy_keywords
+from ..db import randpic_path, DBConnectionManager
+from ..config import fuzzy_keywords
 
 # 模糊匹配
-keyword_picture = on_keyword(fuzzy_keywords, permission=GROUP, priority=5, block=True)
+keyword_picture = on_keyword(set(fuzzy_keywords), permission=GROUP, priority=5, block=True)
 
 @keyword_picture.handle()
 async def fuzzy_pic(event: Event):
