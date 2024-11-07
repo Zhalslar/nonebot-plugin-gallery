@@ -18,10 +18,5 @@ __plugin_meta__ = PluginMetadata(
     type="application",
     homepage="https://github.com/Zhalslar/nonebot-plugin-gallery",
     config=Config,
-    extra={
-        "author": "Zhalslar",
-        "version": "0.1.0",
-        "license": "MIT",
-    }
     supported_adapters={"~onebot.v11"}
 )
